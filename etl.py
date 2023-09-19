@@ -1,27 +1,23 @@
 import pandas as pd
 
-#######################     ETL     #######################
-
 # ETL: Extract, Transform, Load
 
-#######################     Extract     #######################
 # Ruta al archivo CSV de origen
 archivo_origen = "data.csv"
 
 # Leer los datos desde el archivo CSV y especificar que la primera fila es el encabezado
-datos = pd.read_csv(archivo_origen, header=0)
+datos = pd.read_csv(archivo_origen, delimiter=';', header=0)
 
 # Verificar los primeros registros
 print(datos.head())
-
-#######################     Transform     #######################
+print(datos.columns)
 # Agregar una nueva columna 'suma' que contenga la suma de dos columnas existentes
+# Asumiendo que las columnas se llaman 'columna1' y 'columna2' en tu archivo CSV
 datos['suma'] = datos['columna1'] + datos['columna2']
 
 # Verificar los cambios
 print(datos.head())
 
-#######################     Load     #######################
 # Ruta al archivo CSV de destino
 archivo_destino = "datos_transformados.csv"
 
