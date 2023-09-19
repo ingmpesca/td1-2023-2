@@ -26,7 +26,6 @@ Este tutorial proporciona una introducción detallada a la biblioteca Pandas de 
     - 7.2 [Agregación de Datos](#agregación-de-datos)
 8. [Manejo de Datos Faltantes](#manejo-de-datos-faltantes)
 9. [Exportar Datos](#exportar-datos)
-10. [Conclusiones](#conclusiones)
 
 ## Instalación de Pandas
 
