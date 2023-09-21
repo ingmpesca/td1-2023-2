@@ -3,7 +3,7 @@ import pandas as pd
 # ETL: Extract, Transform, Load
 
 # Ruta al archivo CSV de origen
-archivo_origen = "data.csv"
+archivo_origen = "td1-2023-2/clase_etl/data.csv"
 
 # Leer los datos desde el archivo CSV y especificar que la primera fila es el encabezado
 datos = pd.read_csv(archivo_origen, delimiter=';', header=0)
