@@ -6,6 +6,10 @@ from sklearn.datasets import load_iris
 
 iris = load_iris()
 df = pd.DataFrame(data= np.c_[iris['data'], iris['target']], columns= iris['feature_names'] + ['target'])
+# Respuesta a la Pregunta 1
+longitudes_petalo_no_setosa = df[(df['target'] != 0)]['petal length (cm)'].sort_values()
+tercer_valor_mas_pequeño = longitudes_petalo_no_setosa.iloc[2]
+print("El tercer valor más pequeño en la longitud del pétalo de las flores que no son 'setosa' es:", tercer_valor_mas_pequeño, "cm.")
 
 # Mostrar las primeras filas del dataframe
 print(df.head())
@@ -43,6 +47,6 @@ plt.show()
 
 # Matriz de correlación
 corr_matrix = df.corr()
-sns.heatmap(corr_matrix, annot=True, cmap="coolwarm")
+sns.heatmap(corr_matrix, annot=False, cmap="coolwarm")
 plt.title("Matriz de Correlación")
 plt.show()

@@ -29,7 +29,7 @@ nombre_tabla = "example"
 
 # Crear la tabla en la base de datos si no existe
 # Esto es opcional, puedes omitirlo si ya tienes la tabla creada
-cursor.execute(f"CREATE TABLE IF NOT EXISTS {nombre_tabla} (columna1 INT, columna2 INT, columna2 INT)")
+cursor.execute(f"CREATE TABLE IF NOT EXISTS {nombre_tabla} (columna1 INT, columna2 INT, suma INT)")
 
 # Iterar a través de las filas de datos y cargar en la base de datos
 for indice, fila in datos.iterrows():
