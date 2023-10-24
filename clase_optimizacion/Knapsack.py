@@ -14,7 +14,7 @@ valores = [60, 100, 120]
 problema = pulp.LpProblem("Mochila", pulp.LpMaximize)
 
 # Variables binarias
-x = [pulp.LpVariable(f"x{i}", 0, 1, pulp.LpInteger) for i in range(len(pesos))]
+x = [pulp.LpVariable(f"x{i}", 0, 1, pulp.LpBinary) for i in range(len(pesos))]
 
 # Función objetivo
 problema += sum(valores[i] * x[i] for i in range(len(pesos)))
